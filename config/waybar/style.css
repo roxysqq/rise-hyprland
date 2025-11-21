@@ -1,0 +1,132 @@
+window#waybar {
+    background-color: #2d2f35;
+    border-radius: 8px;
+    border: 1px solid #4c566a;
+    color: #eceff4;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    min-height: 0;
+}
+
+/* ВСЕ модули с одинаковыми отступами */
+#workspaces,
+#clock,
+#battery,
+#tray,
+#backlight,
+#pulseaudio,
+#cpu,
+#memory,
+#temperature,
+#custom-keyboard {
+    padding: 0 6px;
+    margin: 0 1px;
+    background: transparent;
+    border: none;
+}
+
+/* Рабочие столы */
+#workspaces {
+    padding: 4px 6px;
+    margin: 0;
+    border-radius: 8px;
+}
+
+#workspaces button {
+    color: #626569;
+    padding: 0 6px;
+    border: none;
+    border-radius: 6px;
+    min-width: 5px;
+    font-weight: bold;
+    margin: 0 2px 0 0;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    background: #596575;
+}
+
+#workspaces button:hover {
+    background: #434c5e;
+    color: #eceff4;
+}
+
+/* Цвета для разных модулей */
+#clock {
+    color: #eceff4;
+    font-weight: bold;
+}
+
+#battery {
+    color: #a3be8c;
+    font-weight: bold;
+}
+
+#battery.warning {
+    color: #ebcb8b;
+}
+
+#battery.critical {
+    color: #bf616a;
+}
+
+#backlight {
+    color: #ebcb8b;
+    font-weight: bold;
+}
+
+#pulseaudio {
+    color: #b48ead;
+    font-weight: bold;
+}
+
+#pulseaudio.muted {
+    color: #bf616a;
+}
+
+#cpu {
+    color: #88c0d0;
+    font-weight: bold;
+}
+
+#memory {
+    color: #d08770;
+    font-weight: bold;
+}
+
+#temperature {
+    color: #bf616a;
+    font-weight: bold;
+}
+
+#temperature.critical {
+    color: #bf616a;
+    animation: blink 1s infinite;
+}
+
+#custom-keyboard {
+    color: #88c0d0;
+    font-weight: bold;
+    min-width: 30px;
+}
+
+#custom-keyboard.en {
+    color: #88c0d0;
+}
+
+#custom-keyboard.ru {
+    color: #a3be8c;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+#tray {
+    color: #d8dee9;
+}

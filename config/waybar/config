@@ -1,0 +1,99 @@
+{
+    "layer": "overlay",
+    "position": "top",
+    "height": 26,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["cpu", "memory", "temperature"],
+    "modules-right": ["clock", "pulseaudio", "backlight", "battery", "custom/keyboard", "tray"],
+    "spacing": 4,
+    "margin": "2px",
+    
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}",
+        "format-icons": {
+            "1": "",
+            "2": "", 
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10": ""
+        },
+        "sort-by": "number",
+        "sort-order": "asc"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "interval": 2,
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% ",
+        "interval": 2
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C ",
+        "format-critical": "{temperatureC}°C "
+    },
+    "clock": {
+        "format": "{:%H:%M • %d.%m}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}",
+        "interval": 1
+    },
+    "pulseaudio": {
+        "format": "VOL {volume}%",
+        "format-muted": "MUTE",
+        "format-bluetooth": "VOL {volume}% ",
+        "format-bluetooth-muted": "MUTE ",
+        "scroll-step": 1,
+        "max-volume": 100,
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1%",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        }
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "BLG {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "on-scroll-up": "brightnessctl set 2%+",
+        "on-scroll-down": "brightnessctl set 2%-"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "BAT {capacity}%",
+        "format-charging": "CHG {capacity}%",
+        "format-plugged": "PLG {capacity}%",
+        "format-alt": "{time}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "custom/keyboard": {
+        "exec": "~/.config/waybar/keyboard-layout.sh",
+        "return-type": "json",
+        "interval": 1,
+        "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+        "format": "{}"
+    },
+    "tray": {
+        "icon-size": 14,
+        "spacing": 4
+    }
+}
