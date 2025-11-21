@@ -20,6 +20,7 @@ Super+Q - Exit app
 Super+D - Launch apps
 Super+T - Telegram
 Super+E - File Manager
-Super+Shift+<right/left> - Move windows to waorkspase
+Super+L - Lock
+Super+Shift+<right/left> - Move windows to workspase
 Super+<right/left> - Move focus
 ```
