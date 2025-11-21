@@ -12,3 +12,14 @@ cd rise-hyprland
 ```bash
 ./rise-hyprland/uninstall.sh
 ```
+
+## Keybinds
+```
+Super+W - Zen Browser
+Super+Q - Exit app
+Super+D - Launch apps
+Super+T - Telegram
+Super+E - File Manager
+Super+Shift+<right/left> - Move windows to waorkspase
+Super+<right/left> - Move focus
+```
